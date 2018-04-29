@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ElectronService } from './providers/electron.service';
 import { TranslateService } from '@ngx-translate/core';
 import { AppConfig } from './app.config';
+import { NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -22,5 +23,11 @@ export class AppComponent {
     } else {
       console.log('Mode web');
     }
+  }
+  onAddItem(form: NgForm){
+  
+console.log(form);
+var value = form.value;
+  var newFormValues = new newFormValues(value.name,value.amount,value.type,value.interest,value.date);
   }
 }
