@@ -3,6 +3,9 @@ import { ElectronService } from './providers/electron.service';
 import { TranslateService } from '@ngx-translate/core';
 import { AppConfig } from './app.config';
 import { NgForm} from '@angular/forms';
+import { Server } from './app.query';
+
+
 
 @Component({
   selector: 'app-root',
@@ -15,6 +18,9 @@ export class AppComponent {
 
     translate.setDefaultLang('en');
     console.log('AppConfig', AppConfig);
+    let s = new Server('Anoop','Khushboo');
+    s.displayName();
+     
 
     if (electronService.isElectron()) {
       console.log('Mode electron');
@@ -24,6 +30,7 @@ export class AppComponent {
       console.log('Mode web');
     }
   }
+
   onAddItem(form: NgForm){
   
 console.log(form);
