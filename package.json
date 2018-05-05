@@ -36,8 +36,11 @@
   },
   "dependencies": {
     "bootstrap": "^4.1.0",
+<<<<<<< HEAD
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3",
+=======
+>>>>>>> origin/master
     "sqlite3": "^4.0.0"
   },
   "devDependencies": {
