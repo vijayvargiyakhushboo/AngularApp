@@ -3,7 +3,7 @@ import { ElectronService } from './providers/electron.service';
 import { TranslateService } from '@ngx-translate/core';
 import { AppConfig } from './app.config';
 import { NgForm} from '@angular/forms';
-import { Server } from './app.query';
+import { DB } from './app.db';
 
 
 
@@ -18,8 +18,8 @@ export class AppComponent {
 
     translate.setDefaultLang('en');
     console.log('AppConfig', AppConfig);
-    let s = new Server('Anoop','Khushboo');
-    s.displayName();
+    let db = new DB('Ksb');
+    db.connect();
      
 
     if (electronService.isElectron()) {
